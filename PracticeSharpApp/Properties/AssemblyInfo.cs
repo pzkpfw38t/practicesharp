@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PracticeSharp")]
-[assembly: AssemblyDescription("Practice# - A utility for practicing your musical instrument with playback.")]
+[assembly: AssemblyDescription("Practice# - A utility for practicing your musical instrument with controlled playback")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Yuval Naveh")]
 [assembly: AssemblyProduct("PracticeSharp")]
-[assembly: AssemblyCopyright("Copyright © Yuval Naveh 2010 (http://code.google.com/p/practicesharp) - LGPL V3")]
+[assembly: AssemblyCopyright("Copyright © Yuval Naveh 2010 - https://github.com/bigman73/practicesharp - LGPL V3")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -29,8 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Build and Revision Numbers 
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.7.0.0")]
-[assembly: AssemblyFileVersion("1.7.0.0")]
+[assembly: AssemblyVersion("2.0.8.0")]
+[assembly: AssemblyFileVersion("2.0.8.0")]

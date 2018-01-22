@@ -1,0 +1,8 @@
+bin
+obj
+packages
+*.suo
+/Installer/Deploy
+/Installer/wix311-binaries
+/Installer/MSI/*.wixpdb
+.vs

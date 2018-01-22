@@ -96,6 +96,7 @@ namespace BigMansStuff.PracticeSharp.UI
                 elPreset.SetAttribute(PresetBankFile.XML_Attr_Description, presetData.Description);
                 elPreset.SetAttribute(PresetBankFile.XML_Attr_TimeStretchProfileId, presetData.TimeStretchProfile.Id);
                 elPreset.SetAttribute(PresetBankFile.XML_Attr_RemoveVocals, presetData.RemoveVocals.ToString());
+                elPreset.SetAttribute(PresetBankFile.XML_Attr_InputChannelsMode, presetData.InputChannelsMode.ToString());
             }
 
             // Write to XML file
@@ -166,6 +167,14 @@ namespace BigMansStuff.PracticeSharp.UI
                         presetData.RemoveVocals = Convert.ToBoolean(presetNode.Attributes[PresetBankFile.XML_Attr_RemoveVocals].Value);
                     }
 
+                    InputChannelsModes inputChannelsMode = inputChannelsMode = InputChannelsModes.Both;
+
+                    if (presetNode.Attributes[PresetBankFile.XML_Attr_InputChannelsMode] != null) {
+                        Enum.TryParse(presetNode.Attributes[PresetBankFile.XML_Attr_InputChannelsMode].Value, out inputChannelsMode);
+                    }                    
+                   
+                    presetData.InputChannelsMode = inputChannelsMode;
+
                     PresetControl presetControl = presetControls[presetId];
                     presetControl.PresetDescription = presetData.Description;
                 }
@@ -174,7 +183,7 @@ namespace BigMansStuff.PracticeSharp.UI
             }
             catch (Exception ex)
             {
-                m_logger.ErrorException("Failed loading Presets Bank for file: " + m_currentAudioFilename, ex);
+                m_logger.Error(ex, "Failed loading Presets Bank for file: " + m_currentAudioFilename);
                 MessageBox.Show(null, "Failed loading Presets Bank for file: " + m_currentAudioFilename, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
@@ -245,6 +254,7 @@ namespace BigMansStuff.PracticeSharp.UI
         const string XML_Attr_Description = "Description";
         const string XML_Attr_TimeStretchProfileId = "TimeStretchProfileId";
         const string XML_Attr_RemoveVocals = "RemoveVocals";
+        const string XML_Attr_InputChannelsMode = "InputChannelsMode";
 
         #endregion
     }
