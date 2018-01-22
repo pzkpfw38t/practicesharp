@@ -235,7 +235,7 @@ namespace BigMansStuff.PracticeSharp.UI
             // 
             // openFileDialog
             // 
-            this.openFileDialog.Filter = "All Music Files|*.mp3;*.m4a;*.wav;*.ogg;*.flac;*.wma;*.aiff|MP3 files|*.mp3|M4A files|*.m4a|WAV files|*" +
+            this.openFileDialog.Filter = "All Music Files|*.mp3;*.wav;*.ogg;*.flac;*.wma;*.aiff|MP3 files|*.mp3|WAV files|*" +
     ".wav|Ogg Vorbis files|*.ogg|FLAC files|*.flac|WMA files|*.wma|AIFF files|*.aiff";
             // 
             // volumeTrackBar
